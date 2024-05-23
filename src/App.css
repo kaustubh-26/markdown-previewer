@@ -1,0 +1,124 @@
+/* width */
+::-webkit-scrollbar {
+  @apply w-[10px];
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  @apply bg-[#f1f1f1] rounded-3xl;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  @apply bg-[#888] rounded-2xl;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-[#555];
+}
+
+#root {
+  @apply max-w-[100vw] m-0 m-auto pb-8 text-center;
+}
+
+body {
+  @apply bg-[#2f2f2f];
+}
+.content-container {
+  @apply flex flex-col m-auto mt-10 w-[90%];
+}
+
+.glowing-box {
+  @apply shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#08f,0_0_10px_#08f,0_0_10px_#08f];
+}
+
+#editor-container {
+  @apply w-full h-full text-lg bg-[#3e4141] text-white resize-none overflow-auto rounded-2xl glowing-box mr-[40px];
+}
+
+#preview-container {
+  @apply w-full h-full text-lg bg-[#3e4141] text-white resize-none overflow-auto rounded-2xl glowing-box ml-[40px];
+}
+
+#preview {
+  @apply w-full h-[91vh] overflow-auto text-left text-lg bg-[#3e4141] text-white p-4 rounded-b-2xl glowing-box;
+}
+
+.content-header {
+  @apply flex items-center relative px-4 py-2 text-base font-sans justify-between rounded-t-md bg-[#555];
+}
+#editor-header {
+  @apply flex items-center relative px-4 py-2 text-base font-sans justify-between rounded-t-md bg-[#555];
+}
+
+#editor {
+  @apply w-full h-[90vh] text-lg bg-[#3e4141] text-white resize-none overflow-auto p-4 rounded-b-2xl;
+}
+
+.markdown-body h1 {
+  @apply text-3xl font-bold mt-4 mb-2;
+}
+
+.markdown-body h2 {
+  @apply text-2xl font-bold mt-4 mb-2;
+}
+
+.markdown-body h3 {
+  @apply text-xl font-bold mt-4 mb-2;
+}
+
+.markdown-body p {
+  @apply my-2;
+}
+
+.markdown-body code {
+  @apply bg-gray-100 p-1 rounded text-black;
+}
+
+.markdown-body pre {
+  @apply bg-gray-100 p-4 rounded;
+}
+
+.markdown-body blockquote {
+  @apply border-l-4 border-gray-300 pl-4 italic;
+}
+
+.markdown-body a {
+  @apply text-blue-500 underline;
+}
+
+.markdown-body img {
+  @apply max-w-full h-auto;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  @apply list-disc list-inside my-2;
+}
+
+.markdown-body li {
+  @apply my-1;
+}
+
+.markdown-body strong {
+  @apply font-bold;
+}
+
+.markdown-body em {
+  @apply italic;
+}
+
+@media screen and (min-width: 768px) {
+  .content-container {
+    @apply flex-row w-[80%];
+  }
+
+  #editor-container {
+    @apply w-[50%] mr-[10px];
+  }
+
+  #preview-container {
+    @apply w-[50%] ml-[10px] mt-0;
+  }
+}
